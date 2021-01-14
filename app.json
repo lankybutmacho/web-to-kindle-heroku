@@ -1,7 +1,7 @@
 {
   "name": "Web to Kindle",
   "description": "A service to create Kindle-ready web page screenshots",
-  "repository": "",
+  "repository": "https://github.com/lankybutmacho/web-to-kindle",
   "buildpacks": [
     {
       "url": "https://github.com/jontewks/puppeteer-heroku-buildpack"
