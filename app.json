@@ -1,0 +1,16 @@
+{
+  "name": "Web to Kindle",
+  "description": "A service to create Kindle-ready web page screenshots",
+  "repository": "",
+  "buildpacks": [
+    {
+      "url": "https://github.com/jontewks/puppeteer-heroku-buildpack"
+    }
+  ],
+  "env": {
+    "SCREENSHOT_URL": {
+      "description": "The URL to take a screenshot of. Of which to take a screenshot? Whatever, you get it",
+      "value": "https://darksky.net/details/40.7127,-74.0059/2021-1-6/us12/en"
+    }
+  }
+}

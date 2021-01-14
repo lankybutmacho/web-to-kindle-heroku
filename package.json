@@ -1,0 +1,21 @@
+{
+  "name": "web-to-kindle",
+  "version": "0.1.0",
+  "description": "A service to create Kindle-ready web page screenshots",
+  "engines": {
+    "node": "12.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "puppeteer": "^5.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT"
+}
