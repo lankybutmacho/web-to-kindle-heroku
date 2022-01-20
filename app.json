@@ -1,7 +1,7 @@
 {
   "name": "Web to Kindle",
   "description": "A service to create Kindle-ready web page screenshots",
-  "repository": "https://github.com/lankybutmacho/web-to-kindle",
+  "repository": "https://github.com/lankybutmacho/web-to-kindle-heroku",
   "buildpacks": [
     {
       "url": "heroku/nodejs"

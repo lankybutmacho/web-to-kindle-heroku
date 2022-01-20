@@ -1,5 +1,5 @@
 {
-  "name": "web-to-kindle",
+  "name": "web-to-kindle-heroku",
   "version": "0.1.0",
   "description": "A service to create Kindle-ready web page screenshots",
   "engines": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lankybutmacho/web-to-kindle"
+    "url": "https://github.com/lankybutmacho/web-to-kindle-heroku"
   },
   "license": "MIT"
 }
