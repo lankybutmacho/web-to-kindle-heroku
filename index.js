@@ -15,7 +15,7 @@ express()
     const page = await browser.newPage();
     await page.setViewport({ width: 600, height: 800 });
     await page.goto(process.env.SCREENSHOT_URL || 'https://leosantia.herokuapp.com');
-    await page.waitForNavigation();
+    //await page.waitForNavigation();
     await page.screenshot({
       path: '/tmp/screenshot.png',
     });
