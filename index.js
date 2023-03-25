@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer');
 const execFile = require('child_process').execFile;
 const fs = require('fs');
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
@@ -14,8 +14,8 @@ express()
     const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
     const page = await browser.newPage();
     await page.setViewport({ width: 600, height: 800 });
-    await page.goto(process.env.SCREENSHOT_URL || 'https://leosantia.herokuapp.com');
-    //await page.waitForNavigation();
+    await page.goto('https://leosantia.herokuapp.com');
+    await page.waitForNavigation();
     await page.screenshot({
       path: '/tmp/screenshot.png',
     });
