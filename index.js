@@ -15,7 +15,7 @@ express()
     const page = await browser.newPage();
     await page.setViewport({ width: 600, height: 800 });
     await page.goto(process.env.SCREENSHOT_URL || 'https://darksky.net/details/40.7127,-74.0059/2021-1-6/us12/en');
-    await page.waitForNavigation();
+    await page.waitFor(10000);
     await page.screenshot({
       path: '/tmp/screenshot.png',
     });
