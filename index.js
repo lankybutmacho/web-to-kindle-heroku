@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer');
 const execFile = require('child_process').execFile;
 const fs = require('fs');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
@@ -14,7 +14,7 @@ express()
     const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
     const page = await browser.newPage();
     await page.setViewport({ width: 600, height: 800 });
-    await page.goto('https://leosantia.herokuapp.com');
+    await page.goto(process.env.SCREENSHOT_URL || 'https://darksky.net/details/40.7127,-74.0059/2021-1-6/us12/en');
     await page.waitForNavigation();
     await page.screenshot({
       path: '/tmp/screenshot.png',
@@ -36,7 +36,7 @@ express()
 
 function convert(filename) {
   return new Promise((resolve, reject) => {
-    const args = [filename, '-gravity', 'center', '-extent', '300x1448', '-colorspace', 'gray', '-depth', '8', filename];
+    const args = [filename, '-gravity', 'center', '-extent', '600x800', '-colorspace', 'gray', '-depth', '8', filename];
     execFile('convert', args, (error, stdout, stderr) => {
       if (error) {
         console.error({ error, stdout, stderr });
