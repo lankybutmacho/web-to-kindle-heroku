@@ -17,7 +17,7 @@ express()
     await page.goto(process.env.SCREENSHOT_URL || 'https://darksky.net/details/40.7127,-74.0059/2021-1-6/us12/en');
     // wait 10 sec
     //await page.waitFor(10000);
-    await page.waitForNavigation({ waitUntil: 'networkidle0' });
+    //await page.waitForNavigation({ waitUntil: 'networkidle0' });
   
     await page.screenshot({
       path: '/tmp/screenshot.png',
