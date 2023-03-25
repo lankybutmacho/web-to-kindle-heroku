@@ -7,13 +7,13 @@
       "url": "heroku/nodejs"
     },
     {
-      "url": "https://github.com/kreativitat/web-to-kindle-heroku"
+      "url": "https://github.com/jontewks/puppeteer-heroku-buildpack"
     }
   ],
   "env": {
     "SCREENSHOT_URL": {
       "description": "The URL to take a screenshot of. Of which to take a screenshot? Whatever, you get it",
-      "value": "https://leosantia.herokuapp.com"
+      "value": "https://darksky.net/details/40.7127,-74.0059/2021-1-6/us12/en"
     }
   }
 }
